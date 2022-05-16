@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Karla:wght@300;400;800&display=swap"
+        rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header"> 
+            <h1>Gerador de senha <span class="spanH1" style="color: rgb(56, 225, 169)">aleatória</span></h1>
+            <h2>Nunca mais use senhas fracas.</h2>
+        </div>
+        <div class="btnDiv">
+            <button id="generate-btn">Gerar Novas Senhas</button>
+            <input type="number" min="4" max="50" placeholder="Insira o tamanho da sua senha" id="input-el">
+            <p id="error-p"></p>
+        </div>
+        <div class="passwordDiv">
+            <div class="password1">
+                <p id="psswrd1" onclick="copy1()">...</p>
+            </div>
+            <div class="password2">
+                <p id="psswrd2" onclick="copy2()">...</p>
+            </div>
+            <div class="password3">
+                <p id="psswrd3" onclick="copy3()">...</p>
+            </div>
+            <div class="password4">
+                <p id="psswrd4" onclick="copy4()">...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="style.js"></script>
+    <script src="default.js"></script>
+</body>
+
+</html>
