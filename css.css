@@ -72,6 +72,7 @@ button:hover {
     background-color:#10b980;
     border: solid 1px #10b980;
     transition: 0.3s;
+    letter-spacing: 0.2em;
 }
 
 #psswrd1, #psswrd2, #psswrd3, #psswrd4 {
