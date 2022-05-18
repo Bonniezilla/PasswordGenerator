@@ -9,32 +9,31 @@ let password = "";
 
 let passwords = []
 
-
 function copy1() {
     if (password1El.textContent === '...') {
     } else {
-        navigator.clipboard.writeText(password1El.textContent)
+        navigator.clipboard.writeText(password1El.value)
     }
 }
 
 function copy2() {
     if (password2El.textContent === '...') {
     } else {
-        navigator.clipboard.writeText(password2El.textContent)
+        navigator.clipboard.writeText(password2El.value)
     }
 }
 
 function copy3() {
     if (password3El.textContent === '...') {
     } else {
-        navigator.clipboard.writeText(password3El.textContent)
+        navigator.clipboard.writeText(password3El.value)
     }
 }
 
 function copy4() {
     if (password4El.textContent === '...') {
     } else {
-        navigator.clipboard.writeText(password4El.textContent)
+        navigator.clipboard.writeText(password4El.value)
     }
 }
 
@@ -89,17 +88,13 @@ function getNewPassword() {
 }
 
 function renderPassword() {
-    password1El.textContent = passwords[0]
-    password2El.textContent = passwords[1]
-    password3El.textContent = passwords[2]
-    password4El.textContent = passwords[3]
+    password1El.value = passwords[0]
+    password2El.value = passwords[1]
+    password3El.value = passwords[2]
+    password4El.value = passwords[3]
 
-    password1El.style.color = 'rgb(56, 225, 169)'
-    password2El.style.color = 'rgb(56, 225, 169)'
-    password3El.style.color = 'rgb(56, 225, 169)'
-    password4El.style.color = 'rgb(56, 225, 169)'
-    password1El.style.fontSize = '15px'
-    password2El.style.fontSize = '15px'
-    password3El.style.fontSize = '15px'
-    password4El.style.fontSize = '15px'
+    password1El.className = 'passwords-el' 
+    password2El.className = 'passwords-el'
+    password3El.className = 'passwords-el'
+    password4El.className = 'passwords-el'
 }
