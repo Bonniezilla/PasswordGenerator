@@ -1,42 +1,7 @@
 const buttonEl = document.getElementById('generate-btn')
-const password1El = document.getElementById('psswrd1')
-const password2El = document.getElementById('psswrd2')
-const password3El = document.getElementById('psswrd3')
-const password4El = document.getElementById('psswrd4')
+const passwordDivEl = document.getElementById('passwordDiv')
 const inputEl = document.getElementById('input-el')
 const errorP = document.getElementById('error-p')
-let password = "";
-
-let passwords = []
-
-function copy1() {
-    if (password1El.textContent === '...') {
-    } else {
-        navigator.clipboard.writeText(password1El.value)
-    }
-}
-
-function copy2() {
-    if (password2El.textContent === '...') {
-    } else {
-        navigator.clipboard.writeText(password2El.value)
-    }
-}
-
-function copy3() {
-    if (password3El.textContent === '...') {
-    } else {
-        navigator.clipboard.writeText(password3El.value)
-    }
-}
-
-function copy4() {
-    if (password4El.textContent === '...') {
-    } else {
-        navigator.clipboard.writeText(password4El.value)
-    }
-}
-
 
 const allChars = [
     'A', 'B', 'C', 'D', 'F', 'G', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
@@ -45,8 +10,11 @@ const allChars = [
     '!', '@', '#', '$', '%', '&', '*', '(', ')', '_', '=', '+'
 ]
 
+let password = "";
 
-buttonEl.onclick = function () {
+let passwords = []
+
+buttonEl.onclick = () => {
     if (inputEl.value > 3 && inputEl.value < 51) {
         errorP.textContent = ''
         return createPasswords(),
@@ -88,13 +56,11 @@ function getNewPassword() {
 }
 
 function renderPassword() {
-    password1El.value = passwords[0]
-    password2El.value = passwords[1]
-    password3El.value = passwords[2]
-    password4El.value = passwords[3]
+    passwordDivEl.firstChild.textContent = passwords[0]
+    passwordDivEl.lastChild.textContent = passwords[3]
 
-    password1El.className = 'passwords-el' 
-    password2El.className = 'passwords-el'
-    password3El.className = 'passwords-el'
-    password4El.className = 'passwords-el'
+    passwordDivEl.firstChild.style.color = 'rgb(56, 225, 169)'
+    passwordDivEl.firstChild.style.fontSize = '15px'
+    passwordDivEl.lastChild.style.fontSize = '15px'
+    passwordDivEl.lastChild = 'rgb(56, 225, 169)'
 }
