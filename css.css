@@ -92,6 +92,8 @@ h2 {
 
 section .btnDiv form input:first-child {
     background-color: rgb(56, 225, 169);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 section .btnDiv form input:first-child:hover {
@@ -99,6 +101,11 @@ section .btnDiv form input:first-child:hover {
     background-color: rgb(42, 172, 129);
     transition: 1s;
     letter-spacing: 0.08em;
+}
+
+section .btnDiv form input:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .password {
@@ -147,4 +154,19 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     display: none;
     margin: 0;
+}
+
+@media screen and (max-width: 510px) {
+    section .btnDiv form input:first-child {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    section .btnDiv form input:last-child {
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
 }
