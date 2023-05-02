@@ -8,26 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Karla:wght@300;400;800&display=swap"
         rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Gerador de senha <span class="spanH1" style="color: rgb(56, 225, 169)">aleatória</span></h1>
+    <section>
+        <header>
+            <h1>Gerador de senha <span>aleatória</span></h1>
             <h2>Nunca mais use senhas fracas.</h2>
-        </div>
+        </header>
         <div class="btnDiv">
-            <button id="generate-btn">Gerar Novas Senhas</button>
-            <input type="number" min="4" max="50" placeholder="Insira o tamanho da sua senha" id="input-el">
-            <p id="error-p"></p>
+            <form action="">
+                <input type="submit" id="generate-btn" value="Gerar sovas senhas"autofocus></button>
+                <input type="number" min="5" placeholder="Insira o tamanho da sua senha" id="input-el">
+            </form>
         </div>
-        <div class="passwordDiv" id="passwordDiv">
-            <input placeholder="..." style="cursor: default;" readonly>
-            <input placeholder="..." style="cursor: default;" readonly>
-            <input placeholder="..." style="cursor: default;" readonly>
-            <input placeholder="..." style="cursor: default;" readonly>
+        <p id="errorP">Só são válidos números entre 5 a 35</p>
+        <div class="passwordDiv">
+            <input type="text" placeholder="..." class="password" readonly>
+            <input type="text" placeholder="..." class="password" readonly>
+            <input type="text" placeholder="..." class="password" readonly>
+            <input type="text" placeholder="..." class="password" readonly>
         </div>
-    </div>
+    </section>
     <script src="default.js"></script>
     <script src="objetos.js"></script>
 </body>
